@@ -44,17 +44,22 @@ docker build -t helloworld:v1 Dockerfile
 
 ```
 
-**4. Login to the Registry for storing the image and Tag & push the image to Docker Registry**
+**4. Login to the Docker Registry**
 ```
 docker login hub.docker.com -u username -p password
 
+```
+
+**5. Tag & push the image to Docker Registry**
+
+```
 docker tag helloworld:v1 hub.docker.com/deployanywhere/helloworld:v1
 
 docker push hub.docker.com/deployanywhere/helloworld:v1
 
 ```
 
-**5. Load the application within minikube**
+**6. Load the application within minikube**
 
 Created two files deployment.yml and service.yml
 
