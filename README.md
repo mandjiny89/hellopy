@@ -4,9 +4,9 @@ Write a simple hello world application in any one of these languages: Python, Ru
 
 For source code please refer: https://github.com/singuvenkatesh/Task-EqualExpert
 
-##1. simple hello world application using python language
+**1. simple hello world application using python language**
 
-#helloworld.py
+**helloworld.py**
 	
 from flask import Flask, request
 from flask_restful import Resource, Api
@@ -24,9 +24,9 @@ if __name__ == '__main__':
     app.run('0.0.0.0','3333')
 
 
-#2. Create a Docker file 
+**2. Create a Docker file**
 
-#Dockerfile
+**Dockerfile**
 
 FROM python:3
 ADD helloworld.py /
@@ -35,7 +35,7 @@ RUN pip install flask_restful
 EXPOSE 3333
 CMD [ "python", "./helloworld.py"]
 
-#3. Build the application
+**3. Build the application**
 
 docker build -t helloworld:v1 Dockerfile
 
