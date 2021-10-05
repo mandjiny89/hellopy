@@ -1,10 +1,13 @@
 # Task MINIKUBE
 
-Write a simple hello world application in any one of these languages: Python, Ruby, Go. Build the application within a Docker container and then load balance the application within Minikube. You are not required to automate the installation of Minikube on the host machine
+Write a simple hello world application in any one of these languages: Python, Ruby, Go. Build the application within a Docker container and then load balance the application within Minikube. You are not required to automate the installation of Minikube on the host machine.
+The above Minikube task involves mutiple steps that needs to be achived which are listed below in details. 
 
 For source code please refer: https://github.com/singuvenkatesh/Task-EqualExpert
 
 **1. simple hello world application using python language**
+
+**Python version - 3.X
 
 **helloworld.py**
 ```
@@ -121,10 +124,4 @@ kubectl create -f deployment.yml
 kubectl create -f service.yml
 
 ```
-
-
-
-
-
-
-
+**Advantages of this soultion is easy to scale and maintain. This soultion is always highly avaiable as we have provided the load balancer as a service. We have used 3 relications to ensure that POD  are available at all the time**
