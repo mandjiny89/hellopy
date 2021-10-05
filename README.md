@@ -21,7 +21,7 @@ class Greeting (Resource):
 api.add_resource(Greeting, '/') # Route_1
 
 if __name__ == '__main__':
-    app.run('0.0.0.0','3333')
+    app.run('0.0.0.0','8080')
 
 ```
 **2. Create a Docker file**
@@ -33,7 +33,7 @@ FROM python:3
 ADD helloworld.py /
 RUN pip install flask
 RUN pip install flask_restful
-EXPOSE 3333
+EXPOSE 8080
 CMD [ "python", "./helloworld.py"]
 
 ```
