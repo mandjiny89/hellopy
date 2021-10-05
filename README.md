@@ -103,10 +103,10 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: javaapp
+  name: pythonapp
 spec:
   selector:
-    app: javaapp
+    app: pythonapp
   ports:
   - protocol: TCP
     port: 80
