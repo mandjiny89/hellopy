@@ -28,6 +28,7 @@ if __name__ == '__main__':
 
 **Dockerfile**
 
+```
 FROM python:3
 ADD helloworld.py /
 RUN pip install flask
@@ -35,24 +36,31 @@ RUN pip install flask_restful
 EXPOSE 3333
 CMD [ "python", "./helloworld.py"]
 
-**3. Build the application**
+```
 
+**3. Build the application**
+```
 docker build -t helloworld:v1 Dockerfile
 
-#4. Login to the Registry for storing the image and Tag & push the image to Docker Registry
+```
 
+**4. Login to the Registry for storing the image and Tag & push the image to Docker Registry**
+```
 docker login hub.docker.com -u username -p password
 
 docker tag helloworld:v1 hub.docker.com/deployanywhere/helloworld:v1
 
 docker push hub.docker.com/deployanywhere/helloworld:v1
 
-#4. Load the application within minikube
+```
+
+**5. Load the application within minikube**
 
 Created two files deployment.yml and service.yml
 
-#deployment.yml
+**deployment.yml**
 
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -77,8 +85,12 @@ spec:
         name: pythonapp
         ports:
         - containerPort: 8080
+	
+```
 		
-#service.yml
+**service.yml**
+
+```
 
 kind: Service
 apiVersion: v1
@@ -93,12 +105,17 @@ spec:
     targetPort: 8080
     nodePort: 30000
   type: LoadBalancer
+  
+  ```
 
-Next steps to create deployment and service definition files  
+**Next steps to create deployment and service definition files**
+```
 
 kubectl create -f deployment.yml
 
 kubectl create -f service.yml
+
+```
 
 
 
