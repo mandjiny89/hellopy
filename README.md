@@ -7,7 +7,7 @@ For source code please refer: https://github.com/singuvenkatesh/Task-EqualExpert
 **1. simple hello world application using python language**
 
 **helloworld.py**
-	
+```
 from flask import Flask, request
 from flask_restful import Resource, Api
 
@@ -23,7 +23,7 @@ api.add_resource(Greeting, '/') # Route_1
 if __name__ == '__main__':
     app.run('0.0.0.0','3333')
 
-
+```
 **2. Create a Docker file**
 
 **Dockerfile**
