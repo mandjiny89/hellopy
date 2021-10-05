@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pythonapp
+  labels:
+    app: pythonapp
+spec:
+  containers:
+    - name: pythonapp
+      image: hub.docker.com/deployanywhere/helloworld:v1
+      ports:
+        - containerPort: 8080
