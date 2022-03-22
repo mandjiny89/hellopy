@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pythonapp
+  name: pyhello
 spec:
-  replicas: 3
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -11,14 +11,14 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      app: pythonapp
+      app: pyhello
   template:
     metadata:
       labels:
-        app: pythonapp
+        app: pyhello
     spec:
       containers:
-      - image: hub.docker.com/deployanywhere/helloworld:v1
-        name: pythonapp
+      - image: mandjiny89/pyhello:latest
+        name: pyhello
         ports:
         - containerPort: 8080

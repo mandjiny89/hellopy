@@ -1,6 +1,6 @@
-FROM python:3
-ADD helloworld.py /
-RUN pip install flask
-RUN pip install flask_restful
+FROM python:3.6
+ADD pyhello.py requirements.txt  /
+WORKDIR /
+RUN pip install -r requirements.txt
 EXPOSE 8080
-CMD [ "python", "./helloworld.py"]
+CMD [ "python", "./pyhello.py"]

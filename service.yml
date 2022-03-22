@@ -1,13 +1,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: pythonapp
+  name: pyhello
 spec:
   selector:
-    app: pythonapp
+    app: pyhello
   ports:
   - protocol: TCP
-    port: 80
+    port: 8080
     targetPort: 8080
-    nodePort: 30000
+    nodePort: 30007
   type: LoadBalancer

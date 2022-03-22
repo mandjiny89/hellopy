@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pythonapp
+  name: pyhello
   labels:
-    app: pythonapp
+    app: pyhello
 spec:
   containers:
-    - name: pythonapp
-      image: hub.docker.com/deployanywhere/helloworld:v1
+    - name: pyhello
+      image: mandjiny89/pyhello:latest
       ports:
         - containerPort: 8080
